@@ -25,10 +25,10 @@ namespace WK_Shopping.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient<ICategoriaService, CategoriaService>(c =>
-                    c.BaseAddress = new Uri(Configuration["ServiceUrls:CategoriaAPI"])
+                    c.BaseAddress = new Uri(Configuration["ServicesUrls:CategoriaAPI"])
                 );
-            services.AddHttpClient<IProdutoService, ProdutoService>(c =>
-                    c.BaseAddress = new Uri(Configuration["ServiceUrls:ProdutoAPI"])
+            services.AddHttpClient<IProdutoService, ProdutoService>(p =>
+                    p.BaseAddress = new Uri(Configuration["ServicesUrls:ProdutoAPI"])
                 );
             services.AddControllersWithViews();
         }

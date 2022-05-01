@@ -20,7 +20,7 @@ namespace WK_Shopping.Web.Services
             return await response.ReadContentAs<List<CategoriaModel>>();
         }
 
-        public async Task<CategoriaModel> FindAllCategoriaById(long id)
+        public async Task<CategoriaModel> FindCategoriaById(long id)
         {
             var response = await _client.GetAsync($"{BasePath}/{id}");
             return await response.ReadContentAs<CategoriaModel>();
