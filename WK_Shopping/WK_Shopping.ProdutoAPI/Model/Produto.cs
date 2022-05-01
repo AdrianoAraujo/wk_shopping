@@ -23,7 +23,7 @@ namespace WK_Shopping.ProdutoAPI.Model
 
         [Column("categoria_nome")]
         [StringLength(50)]
-        public int CategoriaNome { get; set; }
+        public string CategoriaNome { get; set; }
 
         [Column("imagem_url")]
         [StringLength(300)]
