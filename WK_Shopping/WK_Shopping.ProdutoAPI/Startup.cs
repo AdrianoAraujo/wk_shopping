@@ -12,7 +12,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WK_Shopping.ProdutoAPI.Config;
 using WK_Shopping.ProdutoAPI.Model.Context;
+using WK_Shopping.ProdutoAPI.Repository;
 
 namespace WK_Shopping.ProdutoAPI
 {
@@ -35,11 +37,11 @@ namespace WK_Shopping.ProdutoAPI
                         new MySqlServerVersion(
                             new Version(8, 0, 29))));
 
-            //IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-            //services.AddSingleton(mapper);
-            //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            //services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
