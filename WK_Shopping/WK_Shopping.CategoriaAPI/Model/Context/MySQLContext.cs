@@ -25,52 +25,12 @@ namespace WK_Shopping.CategoriaAPI.Model.Context
             modelBuilder.Entity<Categoria>().HasData(new Categoria
             {
                 Id = 3,
-                Nome = "Action Figure"
-            });
-            modelBuilder.Entity<Categoria>().HasData(new Categoria
-            {
-                Id = 4,
-                Nome = "T-shirt"
-            });
-            modelBuilder.Entity<Categoria>().HasData(new Categoria
-            {
-                Id = 5,
-                Nome = "T-shirt"
-            });
-            modelBuilder.Entity<Categoria>().HasData(new Categoria
-            {
-                Id = 6,
-                Nome = "T-shirt"
-            });
-            modelBuilder.Entity<Categoria>().HasData(new Categoria
-            {
-                Id = 7,
                 Nome = "Sweatshirt"
             });
             modelBuilder.Entity<Categoria>().HasData(new Categoria
             {
-                Id = 8,
+                Id = 4,
                 Nome = "Book"
-            });
-            modelBuilder.Entity<Categoria>().HasData(new Categoria
-            {
-                Id = 9,
-                Nome = "Action Figure"
-            });
-            modelBuilder.Entity<Categoria>().HasData(new Categoria
-            {
-                Id = 10,
-                Nome = "T-shirt"
-            });
-            modelBuilder.Entity<Categoria>().HasData(new Categoria
-            {
-                Id = 11,
-                Nome = "T-shirt"
-            });
-            modelBuilder.Entity<Categoria>().HasData(new Categoria
-            {
-                Id = 12,
-                Nome = "T-shirt"
             });
         }
     }

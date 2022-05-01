@@ -1,6 +1,6 @@
-﻿namespace WK_Shopping.ProdutoAPI.Data.ValueObjects
+﻿namespace WK_Shopping.Web.Models
 {
-    public class ProdutoVO
+    public class ProdutoModel
     {
         public long Id { get; set; }
         public string Nome { get; set; }
