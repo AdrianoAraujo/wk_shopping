@@ -36,7 +36,7 @@ Essa é a tela de inicial.
 ### Detalhes
 Essa é a tela de detalhes do produto.
 
-![image](https://user-images.githubusercontent.com/41703972/80524330-cf3ff980-8965-11ea-8000-2e4466110ae9.png)
+![image](https://github.com/AdrianoAraujo/wk_shopping/blob/main/WK_Shopping_Imagens/Detalhes.png?raw=true)
 
 ### Cadastros
 #### Cadastro de Produtos
