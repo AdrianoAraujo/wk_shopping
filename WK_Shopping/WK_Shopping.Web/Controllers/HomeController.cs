@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WK_Shopping.Web.Models;
+using WK_Shopping.Web.Services.IServices;
 
 namespace WK_Shopping.Web.Controllers
 {
@@ -8,14 +9,24 @@ namespace WK_Shopping.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IProdutoService _produtoService;
+
+        public HomeController(ILogger<HomeController> logger, IProdutoService produtoService)
         {
             _logger = logger;
+            _produtoService = produtoService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var produtos = await _produtoService.FindAllProdutos();
+            return View(produtos);
+        }
+
+        public async Task<IActionResult> Detalhes(int id)
+        {
+            var model = await _produtoService.FindProdutoById(id);
+            return View(model);
         }
 
         public IActionResult Privacy()

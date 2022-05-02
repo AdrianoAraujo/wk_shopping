@@ -1,5 +1,9 @@
 ﻿@model WK_Shopping.Web.Models.CategoriaModel
 
+@{
+    ViewData["Title"] = "Categorias";
+}
+
 <form asp-action="CategoriaDelete">
     <input asp-for="Id" hidden>
     <br/>
@@ -11,7 +15,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="col-2">
-                <label asp-for="Nome" class="control-label pt-2" style="font-size=20px;"></label>
+                <label asp-for="Nome" class="control-label pt-2" style="font-size=20px;">Nome</label>
             </div>
             <div class="col-10 pb-3">
                 <input asp-for="Nome" disabled class="form-control"/>
@@ -21,7 +25,7 @@
             </div>
 
             <div class="col-5">
-                <input type="submit" value="Delete" class="btn btn-danger form-control" />
+                <input type="submit" value="Excluir" class="btn btn-danger form-control" />
             </div>
         </div>
     </div>
